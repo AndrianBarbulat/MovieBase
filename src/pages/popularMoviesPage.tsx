@@ -48,7 +48,7 @@ const PopularMoviesPage = () => {
             </Grid>
             {data?.total_pages > 1 && (
                 <Box sx={{ display: 'flex', justifyContent: 'center', marginTop: 4 }}>
-                    <Pagination count={data.total_pages} page={page} onChange={handlePageChange} />
+                    <Pagination count={data.total_pages} page={page} onChange={handlePageChange} sx={{ '& .MuiPaginationItem-root': { color: 'white !important' }, '& .MuiPaginationItem-root.Mui-selected': { backgroundColor: '#F5C518 !important', color: '#0a0f1e !important', fontWeight: 700 }, '& .MuiPaginationItem-root:hover': { backgroundColor: 'rgba(245,197,24,0.15) !important' }, '& .MuiPaginationItem-root.Mui-disabled': { color: 'rgba(255,255,255,0.3) !important' } }} />
                 </Box>
             )}
         </Paper>
