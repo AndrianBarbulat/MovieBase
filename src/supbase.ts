@@ -1,4 +1,4 @@
 export const supabaseConfig = {
-    url: '',
-    anonKey: ''
-  };
+    url: import.meta.env.VITE_SUPABASE_URL,
+    anonKey: import.meta.env.VITE_SUPABASE_ANON_KEY
+};
