@@ -69,13 +69,26 @@ const HomePage = () => {
     return (
         <>
             <Box sx={{ padding: '20px', backgroundColor: 'transparent' }}>
-                <FormControl fullWidth>
+                <FormControl fullWidth sx={{
+                    '& .MuiInputLabel-root': { color: 'rgba(255,255,255,0.5)' },
+                    '& .MuiInputLabel-root.Mui-focused': { color: '#F5C518' },
+                    '& .MuiOutlinedInput-root': {
+                        color: 'white',
+                        backgroundColor: 'rgba(255,255,255,0.05)',
+                        borderRadius: '8px',
+                        '& fieldset': { borderColor: 'rgba(255,255,255,0.15)' },
+                        '&:hover fieldset': { borderColor: 'rgba(245,197,24,0.4)' },
+                        '&.Mui-focused fieldset': { borderColor: '#F5C518' },
+                    },
+                    '& .MuiSelect-icon': { color: '#F5C518' },
+                }}>
                     <InputLabel id="sort-label">Sort By</InputLabel>
                     <Select
                         labelId="sort-label"
                         value={sortProperty}
                         onChange={handleSortChange}
                         displayEmpty
+                        MenuProps={{ PaperProps: { sx: { bgcolor: '#0d1b2a', color: 'white', border: '1px solid rgba(245,197,24,0.2)' } } }}
                     >
                         <MenuItem value=""><em>Sort By</em></MenuItem>
                         <MenuItem value="popularity">Popularity</MenuItem>
@@ -100,7 +113,17 @@ const HomePage = () => {
             />
             {data?.total_pages > 1 && (
                 <Box sx={{ display: 'flex', justifyContent: 'center', marginTop: 4 }}>
-                    <Pagination count={data.total_pages} page={page} onChange={handlePageChange} />
+                    <Pagination
+                        count={data.total_pages}
+                        page={page}
+                        onChange={handlePageChange}
+                        sx={{
+                            '& .MuiPaginationItem-root': { color: 'white !important' },
+                            '& .MuiPaginationItem-root.Mui-selected': { backgroundColor: '#F5C518 !important', color: '#0a0f1e !important', fontWeight: 700 },
+                            '& .MuiPaginationItem-root:hover': { backgroundColor: 'rgba(245,197,24,0.15) !important' },
+                            '& .MuiPaginationItem-root.Mui-disabled': { color: 'rgba(255,255,255,0.3) !important' },
+                        }}
+                    />
                 </Box>
             )}
         </>

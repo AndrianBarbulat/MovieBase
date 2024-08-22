@@ -6,28 +6,46 @@ import RemoveCircleOutlineIcon from '@mui/icons-material/RemoveCircleOutline';
 import { styled } from '@mui/material/styles';
 
 const StyledTextField = styled(TextField)({
+  marginBottom: '12px',
   '& .MuiOutlinedInput-root': {
-    marginBottom: '12px', 
-    borderColor: 'green', 
-  }
+    color: 'white',
+    backgroundColor: 'rgba(255,255,255,0.05)',
+    borderRadius: '8px',
+    '& fieldset': { borderColor: 'rgba(255,255,255,0.15)' },
+    '&:hover fieldset': { borderColor: 'rgba(245,197,24,0.4)' },
+    '&.Mui-focused fieldset': { borderColor: '#F5C518' },
+  },
+  '& .MuiInputLabel-root': { color: 'rgba(255,255,255,0.5)' },
+  '& .MuiInputLabel-root.Mui-focused': { color: '#F5C518' },
+  '& .MuiInputBase-input': { color: 'white' },
+  '& .MuiInputBase-inputMultiline': { color: 'white' },
 });
 
 const StyledFormControl = styled(FormControl)({
+  marginBottom: '12px',
+  width: '100%',
+  '& .MuiInputLabel-root': { color: 'rgba(255,255,255,0.5)' },
+  '& .MuiInputLabel-root.Mui-focused': { color: '#F5C518' },
   '& .MuiOutlinedInput-root': {
-    marginBottom: '12px', 
-    borderColor: 'green', 
+    color: 'white',
+    backgroundColor: 'rgba(255,255,255,0.05)',
+    borderRadius: '8px',
+    '& fieldset': { borderColor: 'rgba(255,255,255,0.15)' },
+    '&:hover fieldset': { borderColor: 'rgba(245,197,24,0.4)' },
+    '&.Mui-focused fieldset': { borderColor: '#F5C518' },
   },
-  marginBottom: '12px'
+  '& .MuiSelect-icon': { color: '#F5C518' },
 });
 
 const GreenButton = styled(Button)(({ theme }) => ({
-    backgroundColor: 'green',
-    '&:hover': {
-      backgroundColor: '#045a04',
-    },
-    color: 'white',
-    margin: theme.spacing(1, 0), 
-    width: '100%', 
+    backgroundColor: '#F5C518',
+    '&:hover': { backgroundColor: '#e6b800' },
+    color: '#0a0f1e',
+    fontWeight: 700,
+    borderRadius: '8px',
+    textTransform: 'none',
+    margin: theme.spacing(1, 0),
+    width: '100%',
 }));
 
 const initialMovieState = {
@@ -57,7 +75,7 @@ const FantasyMovieForm = () => {
 
     useEffect(() => {
         const checkSession = async () => {
-            const session = supabase.auth.session();
+            const { data: { session } } = await supabase.auth.getSession();
             setUser(session?.user);
         };
 
@@ -166,7 +184,7 @@ const FantasyMovieForm = () => {
                 <StyledTextField name="overview" label="Overview" value={movie.overview} onChange={handleChange} fullWidth multiline rows={4} required />
                 <StyledFormControl fullWidth required>
                     <InputLabel>Genre</InputLabel>
-                    <Select name="genre" value={movie.genre} onChange={handleChange} label="Genre">
+                    <Select name="genre" value={movie.genre} onChange={handleChange} label="Genre" MenuProps={{ PaperProps: { sx: { bgcolor: '#0d1b2a', color: 'white', border: '1px solid rgba(245,197,24,0.2)' } } }}>
                         <MenuItem value="Action">Action</MenuItem>
                         <MenuItem value="Comedy">Comedy</MenuItem>
                         <MenuItem value="Drama">Drama</MenuItem>
