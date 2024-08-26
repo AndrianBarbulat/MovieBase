@@ -27,7 +27,7 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
         // Properly handle asynchronous fetching of the session
         const fetchSession = async () => {
             setLoading(true);
-            const currentSession = supabase.auth.session();
+            const { data: { session: currentSession } } = await supabase.auth.getSession();
             setSession(currentSession);
             setLoading(false);
         };
