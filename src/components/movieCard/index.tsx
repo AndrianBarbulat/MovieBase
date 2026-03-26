@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
-import { Link } from "react-router-dom";import { Card, CardActions, CardContent, CardMedia, Typography, Box, Chip } from "@mui/material";
+import { Link } from "react-router-dom";
+import { Card, CardActions, CardContent, CardMedia, Typography, Box, Chip } from "@mui/material";
 import StarRateIcon from "@mui/icons-material/StarRate";
 import CalendarTodayIcon from "@mui/icons-material/CalendarToday";
 import InfoOutlinedIcon from "@mui/icons-material/InfoOutlined";
@@ -135,10 +136,6 @@ const MovieCard: React.FC<MovieCardProps> = ({ movie, action, onUpcomingPage }) 
             Details
           </Box>
         </Link>
- More Info ...
-            </Button>
-          </Link>
-        </Box>
       </CardActions>
     </Card>
   );

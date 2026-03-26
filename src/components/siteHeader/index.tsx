@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useTheme } from "@mui/material/styles";
-import useMediaQuery from "@mui/material/useMediaQueryimpimport {
+import useMediaQuery from "@mui/material/useMediaQuery";
+import {
   AppBar, Toolbar, Typography, IconButton, Button,
   MenuItem, Menu, Select, Box, styled, Divider,
 } from "@mui/material";
@@ -327,13 +328,6 @@ const SiteHeader = () => {
               </Menu>
             </>
           )}
-
-> (
-              <Button key={opt.label} color="inherit" onClick={() => navigate(opt.path)}>
-                {opt.label}
-              </Button>
-            ))
-          )}
         </Toolbar>
       </AppBar>
       <Offset />
@@ -342,3 +336,4 @@ const SiteHeader = () => {
 };
 
 export default SiteHeader;
+

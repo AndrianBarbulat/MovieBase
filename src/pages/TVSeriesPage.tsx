@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Link as RouterLink } from 'react-router-dom';
 import { useQuery } from 'react-query';
-import  Grid, Typography, Card, CardContent, CardMedia, TextField,
+import { Grid, Typography, Card, CardContent, CardMedia, TextField,
   MenuItem, FormControl, Select, InputLabel, Box, Pagination, Chip
 } from '@mui/material';
 import StarRateIcon from '@mui/icons-material/StarRate';
@@ -163,12 +163,6 @@ const TVSeriesPage = () => {
       )}
     </Box>
   );
-{ color: 'rgba(255,255,255,0.3) !important' } }} />
-                    </Box>
-                )}
-            </Paper>
-        </>
-    );
 };
 
 export default TVSeriesPage;

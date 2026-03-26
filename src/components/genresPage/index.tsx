@@ -1,5 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';import { Box, Typography } from '@mui/material';
+import { Link } from 'react-router-dom';
+import { Box, Typography } from '@mui/material';
 import TheatersIcon from '@mui/icons-material/Theaters';
 
 interface GenreItemProps {
@@ -39,9 +40,6 @@ const GenreItem: React.FC<GenreItemProps> = ({ genre }) => {
       </Box>
     </Link>
   );
-         </Button>
-        </li>
-    );
 };
 
 export default GenreItem;

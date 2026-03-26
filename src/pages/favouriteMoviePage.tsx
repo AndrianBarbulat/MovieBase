@@ -1,5 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react';
-import { AuthContext } from '../components/authenthication';import {
+import { AuthContext } from '../components/authenthication';
+import {
   CircularProgress, Typography, Box, Container, Card, CardMedia,
   CardContent, Grid, MenuItem, FormControl, InputLabel, Select,
   Pagination, Chip
@@ -165,9 +166,6 @@ const FavoritesPage = () => {
       )}
     </Box>
   );
-.15) !important' }, '& .MuiPaginationItem-root.Mui-disabled': { color: 'rgba(255,255,255,0.3) !important' } }} />
-        </Container>
-    );
 };
 
 export default FavoritesPage;

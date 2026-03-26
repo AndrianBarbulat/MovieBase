@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
-import ArrowBackIcon from "@mui/icons-material/ArrowBack";import HomeIcon from "@mui/icons-material/Home";
+import ArrowBackIcon from "@mui/icons-material/ArrowBack";
+import HomeIcon from "@mui/icons-material/Home";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import { Box, IconButton, Typography, Chip } from "@mui/material";
 import { useParams, useNavigate } from "react-router-dom";
@@ -80,9 +81,6 @@ const MovieHeader: React.FC<MovieHeaderProps> = ({ title, homepage, tagline }) =
         )}
       </Box>
     </Box>
-primary" fontSize="large" />
-      </IconButton>
-    </Paper>
   );
 };
 

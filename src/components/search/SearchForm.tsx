@@ -52,9 +52,6 @@ const SearchForm = ({ searchParams, setSearchParams, handleSearch }) => {
           Search
         </Button>
       </Box>
-imary" sx={{ mt: 2 }}>
-        Search
-      </Button>
     </Box>
   );
 };

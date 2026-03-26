@@ -1,4 +1,5 @@
-import { useQuery } from 'react-query';import Spinner from '../components/spinner';
+import { useQuery } from 'react-query';
+import Spinner from '../components/spinner';
 import GenreItem from '../components/genresPage/index';
 import { fetchGenres } from "../api/tmdb-api";
 import { Grid, Box, Typography } from '@mui/material';
@@ -26,8 +27,6 @@ const GenresPage = () => {
       </Grid>
     </Box>
   );
-        </Paper>
-    );
 };
 
 export default GenresPage;

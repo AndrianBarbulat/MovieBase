@@ -1,5 +1,6 @@
 import React, { useState, useContext, useEffect } from 'react';
-import { useNavigate, Link } from 'react-router-dom';import { TextField, Button, Typography, Box, Paper } from '@mui/material';
+import { useNavigate, Link } from 'react-router-dom';
+import { TextField, Button, Typography, Box, Paper } from '@mui/material';
 import MovieIcon from '@mui/icons-material/Movie';
 import { AuthContext } from '../components/authenthication/';
 
@@ -147,9 +148,4 @@ export default function Login() {
       </Paper>
     </Box>
   );
-nk>
-                </Box>
-            </form>
-        </Container>
-    );
 }

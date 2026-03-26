@@ -1,4 +1,5 @@
-import { useState } from 'react';import { Link as RouterLink } from 'react-router-dom';
+import { useState } from 'react';
+import { Link as RouterLink } from 'react-router-dom';
 import { useQuery } from 'react-query';
 import Spinner from '../components/spinner';
 import { Grid, Typography, Card, CardMedia, CardContent, Box, Pagination, Chip } from '@mui/material';
@@ -46,9 +47,10 @@ const ActorsPage = () => {
 
       <Grid container spacing={3}>
         {data?.results.map((actor) => (
-          <Grid item xs={12} sm={6} md={4} lg={3} key={actor.id}>
+          <Grid item xs={12} sm={6} md={4} lg={3} key={actor.id} sx={{ display: 'flex' }}>
             <Card
               sx={{
+                width: '100%',
                 backgroundColor: '#0d1b2a',
                 color: 'white',
                 borderRadius: '12px',
@@ -63,7 +65,7 @@ const ActorsPage = () => {
               <Box sx={{ position: 'relative' }}>
                 <CardMedia
                   component="img"
-                  sx={{ height: 320, objectFit: 'cover', objectPosition: 'top' }}
+                  sx={{ height: 520, objectFit: 'cover', objectPosition: 'top' }}
                   image={actor.profile_path ? `https://image.tmdb.org/t/p/w500${actor.profile_path}` : 'https://via.placeholder.com/500x750?text=No+Image'}
                   alt={actor.name}
                 />
@@ -102,11 +104,6 @@ const ActorsPage = () => {
       )}
     </Box>
   );
-
-                </Box>
-            )}
-        </Paper>
-    );
 };
 
 export default ActorsPage;
