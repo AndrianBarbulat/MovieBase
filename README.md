@@ -4,8 +4,6 @@
 
 __Name:__ Andrian Barbulat
 
-__Video Demo:__ https://youtu.be/3NxP2ArV2B8
-
 __Vercel:__ https://movie-base-fullstack.vercel.app/ 
 
 This repository contains an implementation of the Movie Fans Web Application using the React library. 
@@ -31,6 +29,17 @@ This repository contains an implementation of the Movie Fans Web Application usi
 + Allowing the addition of a cast, where each member has a role name and description. Adding/Uploading a movie poster.
 + Backend persistence using Supabse -  Favourites, Fantasy movie.
 
+### Project Highlights
+
+<p align="center">
+  <img src="ProjectHighlighImages/01.jpg" width="600" />
+</p>
+<p align="center">
+  <img src="ProjectHighlighImages/02.jpg" width="600" />
+</p>
+<p align="center">
+  <img src="ProjectHighlighImages/03.jpg" width="600" />
+</p>
 
 ### Setup requirements.
 
