@@ -32,13 +32,13 @@ This repository contains an implementation of the Movie Fans Web Application usi
 ### Project Highlights
 
 <p align="center">
-  <img src="ProjectHighlighImages/01.jpg" width="600" />
+  <img src="ProjectHighlighImages/01.png" width="600" />
 </p>
 <p align="center">
-  <img src="ProjectHighlighImages/02.jpg" width="600" />
+  <img src="ProjectHighlighImages/02.png" width="600" />
 </p>
 <p align="center">
-  <img src="ProjectHighlighImages/03.jpg" width="600" />
+  <img src="ProjectHighlighImages/03.png" width="600" />
 </p>
 
 ### Setup requirements.
